@@ -14,300 +14,150 @@
   <body>
     <style>
       * {
+        font-family: Montserrat, sans-serif;
         margin: 0;
-        outline: none;
-        font-family: 'Montserrat', sans-serif;
-        text-decoration: none;
+        padding: 0;
       }
 
-      #info p {
-        margin-left: 16.62rem;
+      .paragraph {
+        margin-left: 31px;
       }
     </style>
 
-    <!-- box Geral -->
-    <div style="display: flex">
-      <!-- informações de contato -->
-      <div
-        id="info"
-        style="
-          background: #ececeb;
-          color: #8c8e90;
-          width: 37.5rem;
-          height: 9rem;
-          margin-top: 6rem;
-          border-radius: 12px;
-          position: absolute;
-        "
-      >
-        <div
-          style="
-            border-bottom: 2px solid #7dafc4;
-            width: 2rem;
-            margin-left: 16.625rem;
-          "
-        ></div>
-
-        <p style="margin-top: 0.875rem; font-size: 0.78rem; font-weight: 600">
-          +351 935 024 920
-        </p>
-
-        <p style="margin-top: 0.35rem; font-size: 0.78rem; font-weight: 600">
-          +351 227 724 884
-        </p>
-
-        <p style="margin-top: 0.4rem; font-size: 0.5625rem; font-weight: 400">
-          Chamada para rede móvel/fixa nacional
-        </p>
-
-        <p style="margin-top: 0.5rem; font-size: 0.78rem; font-weight: 400">
-          <a
-            target="_blank"
-            style="color: #8c8e90"
-            href="https://grandesencontros.pt/home-main/"
-            >www.grandesencontros.pt</a
+    <table
+      id="main"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      style="height: 240px"
+    >
+      <tr>
+        <!-- Espaço para imagem de colaborador e Logo -->
+        <td>
+          <table
+            id="avatar-logo"
+            align="center"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            style="
+              width: 235px;
+              background: #7dafc4;
+              border-collapse: collapse;
+              height: 240px;
+            "
           >
-        </p>
-
-        <p style="margin-top: 0.6rem; font-size: 0.718rem; font-weight: 400">
-          Rua 28 de Janeiro, 350, Edifício L, Fracção 17
-        </p>
-
-        <p style="margin-top: 0.2rem; font-size: 0.718rem; font-weight: 400">
-          4400-335 Vila Nova de Gaia
-        </p>
-      </div>
-      <!-- fim informações de contato -->
-
-      <!-- box de fundo do avatar e logo -->
-      <div
-        id="fundo-avatar-logo"
-        style="
-          background-color: #7dafc4;
-          width: 14.68rem;
-          height: 15rem;
-          border-radius: 12px;
-          position: relative;
-        "
-      >
-        <!-- Logo -->
-        <div
-          style="
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            margin-top: 11rem;
-            left: 1rem;
-          "
-        >
-          <svg
-            width="203"
-            height="42"
-            viewBox="0 0 203 42"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <rect width="203" height="42" fill="url(#pattern0)" />
-            <defs>
-              <pattern
-                id="pattern0"
-                patternContentUnits="objectBoundingBox"
-                width="1"
-                height="1"
-              >
-                <use
-                  xlink:href="#image0_2_105"
-                  transform="matrix(0.00109769 0 0 0.00530553 0 -0.00137212)"
+            <!-- Foto colaborador -->
+            <tr>
+              <td align="center">
+                <img
+                  class="logo"
+                  id="avatar"
+                  style="
+                    width: 11rem;
+                    height: 10.43rem;
+                    border-radius: 0px 0px 250px 250px;
+                  "
+                  src="https://github.com/JuliaParnahyba/eSignGE/blob/main/assets/Avatares/RitaMendes-min.jpg?raw=true"
                 />
-              </pattern>
-              <image
-                id="image0_2_105"
-                width="911"
-                height="189"
-                xlink:href="data:image/png;base64,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"
-              />
-            </defs>
-          </svg>
-        </div>
-        <!-- fim logo -->
+              </td>
+            </tr>
 
-        <!-- sub logo -->
-        <p
-          style="
-            position: absolute;
-            top: 13.3rem;
-            left: 4.75rem;
-
-            font-size: 0.593rem;
-            font-weight: 400;
-            color: #ffffff;
-            letter-spacing: 0.52em;
-          "
-        >
-          CATERING
-        </p>
-
-        <!-- foto colab. -->
-        <img
-          src="./assets/Avatares/RitaMendes.jpg"
-          style="
-            border-radius: 0px 0px 250px 250px;
-            margin-left: 1.81rem;
-            width: 11rem;
-          "
-        />
-        <!-- fim foto colab. -->
-      </div>
-      <!-- fim box de fundo do avatar e logo -->
-
-      <!-- títulos -->
-      <div>
-        <h1
-          style="
-            height: 1.31rem;
-
-            margin-top: 1rem;
-            margin-left: 1.93rem;
-
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 1.875rem;
-            color: #7dafc4;
-          "
-        >
-          Rita Mendes
-        </h1>
-        <p
-          style="
-            height: 1.31rem;
-            margin-top: 1rem;
-            margin-left: 2.1rem;
-
-            font-weight: 400;
-            font-size: 0.781rem;
-            color: #8c8e90;
-          "
-        >
-          Coordenadora
-        </p>
-      </div>
-      <!-- fim de títulos -->
-
-      <!-- icons -->
-      <ul
-        style="
-          position: absolute;
-          width: 1rem;
-          height: 15rem;
-          border-radius: 12px;
-          left: 34.375rem;
-
-          background: #7dafc4;
-          list-style-type: none;
-        "
-      >
-        <li style="margin: 1.2rem 0rem 0rem -1.3rem">
-          <a target="_blank" href="https://www.facebook.com/gecatering/">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12.9103 9.99612L13.3767 6.92476H10.4589V4.93252C10.4589 4.09205 10.8658 3.27233 12.1726 3.27233H13.5V0.657525C13.5 0.657525 12.2959 0.450001 11.1452 0.450001C8.7411 0.450001 7.17123 1.92135 7.17123 4.58388V6.92476H4.5V9.99612H7.17123V17.4213C7.70753 17.5064 8.25616 17.55 8.81507 17.55C9.37397 17.55 9.9226 17.5064 10.4589 17.4213V9.99612H12.9103Z"
-                fill="#F6F5F5"
-              />
-            </svg>
-          </a>
-        </li>
-
-        <li style="margin: 2.5rem 0rem 0rem -1.2rem">
-          <a
-            target="_blank"
-            href="https://www.instagram.com/grandesencontros_catering/"
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15.9552 4.70136C15.9168 3.84948 15.7792 3.26661 15.5839 2.75741C15.3791 2.23219 15.107 1.78383 14.6621 1.34187C14.2172 0.89992 13.7724 0.621297 13.2474 0.419536C12.7385 0.220977 12.156 0.0864692 11.3047 0.0480384C10.4501 0.00960768 10.178 0 8.008 0C5.83476 0 5.56271 0.00960768 4.71134 0.0480384C3.85997 0.0864692 3.27745 0.224179 2.76855 0.419536C2.24044 0.6245 1.79235 0.896717 1.35067 1.34187C0.908978 1.78703 0.630522 2.23219 0.428882 2.75741C0.233643 3.26661 0.0960151 3.84948 0.0576074 4.70136C0.0191997 5.55645 0.00959778 5.82866 0.00959778 8C0.00959778 10.1745 0.0191997 10.4468 0.0576074 11.2986C0.0960151 12.1505 0.233643 12.7334 0.428882 13.2426C0.633723 13.7678 0.905777 14.2162 1.35067 14.6581C1.79235 15.1033 2.24044 15.3787 2.76535 15.5805C3.27425 15.779 3.85677 15.9135 4.70814 15.952C5.56271 15.9904 5.83476 16 8.0048 16C10.178 16 10.4501 15.9904 11.3015 15.952C12.1528 15.9135 12.7353 15.7758 13.2442 15.5805C13.7691 15.3755 14.2172 15.1033 14.6589 14.6581C15.1006 14.213 15.3791 13.7678 15.5807 13.2426C15.7792 12.7334 15.9136 12.1505 15.952 11.2986C15.9904 10.4436 16 10.1713 16 8C16 5.82866 15.9936 5.55324 15.9552 4.70136ZM14.5181 11.2346C14.4829 12.016 14.3517 12.442 14.2428 12.7206C14.0988 13.0921 13.9228 13.3611 13.6411 13.6429C13.3595 13.9247 13.0938 14.0945 12.7193 14.245C12.4377 14.3539 12.012 14.4852 11.2342 14.5204C10.3925 14.5588 10.1396 14.5685 8.0016 14.5685C5.86357 14.5685 5.61072 14.5588 4.76895 14.5204C3.98799 14.4852 3.56231 14.3539 3.28385 14.245C2.91258 14.1009 2.64372 13.9247 2.36207 13.6429C2.08041 13.3611 1.91078 13.0953 1.76035 12.7206C1.65153 12.4388 1.5203 12.0128 1.48509 11.2346C1.44669 10.3923 1.43708 10.1393 1.43708 8C1.43708 5.86069 1.44669 5.60769 1.48509 4.76541C1.5203 3.98399 1.65153 3.55805 1.76035 3.27942C1.90438 2.90793 2.08041 2.63891 2.36207 2.35709C2.64372 2.07526 2.90938 1.90552 3.28385 1.755C3.56551 1.64612 3.99119 1.51481 4.76895 1.47958C5.61072 1.44115 5.86357 1.43155 8.0016 1.43155C10.1396 1.43155 10.3925 1.44115 11.2342 1.47958C12.0152 1.51481 12.4409 1.64612 12.7193 1.755C13.0906 1.89912 13.3595 2.07526 13.6411 2.35709C13.9228 2.63891 14.0924 2.90472 14.2428 3.27942C14.3517 3.56125 14.4829 3.98719 14.5181 4.76541C14.5565 5.60769 14.5661 5.86069 14.5661 8C14.5661 10.1393 14.5533 10.3923 14.5181 11.2346Z"
-                fill="#F6F5F5"
-              />
-              <path
-                d="M8.00162 3.88791C5.72917 3.88791 3.892 5.72938 3.892 8C3.892 10.2738 5.73237 12.1121 8.00162 12.1121C10.2709 12.1121 12.1112 10.2674 12.1112 8C12.1112 5.72618 10.2741 3.88791 8.00162 3.88791ZM8.00162 10.6677C6.52933 10.6677 5.33549 9.47318 5.33549 8C5.33549 6.52682 6.52933 5.33226 8.00162 5.33226C9.47391 5.33226 10.6678 6.52682 10.6678 8C10.6678 9.47318 9.47391 10.6677 8.00162 10.6677Z"
-                fill="#F6F5F5"
-              />
-              <path
-                d="M12.2713 4.68855C12.8016 4.68855 13.2314 4.2584 13.2314 3.72778C13.2314 3.19716 12.8016 2.76701 12.2713 2.76701C11.741 2.76701 11.3111 3.19716 11.3111 3.72778C11.3111 4.2584 11.741 4.68855 12.2713 4.68855Z"
-                fill="#F6F5F5"
-              />
-              <path
-                d="M0 8C0 10.1745 0.00960192 10.4468 0.0480096 11.2986C0.0864173 12.1505 0.224045 12.7334 0.419284 13.2426C0.624125 13.7678 0.896179 14.2162 1.34107 14.6581C1.78276 15.1001 2.23085 15.3787 2.75575 15.5805C3.26465 15.779 3.84717 15.9135 4.69854 15.952C5.55311 15.9904 5.82517 16 7.9952 16C10.1684 16 10.4405 15.9904 11.2919 15.952C12.1432 15.9135 12.7257 15.7758 13.2346 15.5805C13.7596 15.3755 14.2076 15.1033 14.6493 14.6581C15.091 14.2162 15.3695 13.7678 15.5711 13.2426C15.7696 12.7334 15.904 12.1505 15.9424 11.2986C15.9808 10.4436 15.9904 10.1713 15.9904 8C15.9904 5.82546 15.9808 5.55324 15.9424 4.70136C15.904 3.84948 15.7664 3.26661 15.5711 2.75741C15.3663 2.23219 15.0942 1.78383 14.6493 1.34187C14.2108 0.896717 13.7628 0.621297 13.2378 0.419536C12.7289 0.220977 12.1464 0.0864692 11.2951 0.0480384C10.4405 0.00960768 10.1684 0 7.9984 0C5.82516 0 5.55311 0.00960768 4.70174 0.0480384C3.85037 0.0864692 3.26785 0.224179 2.75895 0.419536C2.23405 0.6245 1.78596 0.896717 1.34427 1.34187C0.90258 1.78703 0.624125 2.23219 0.422484 2.75741C0.224045 3.26661 0.0864173 3.84948 0.0480096 4.70136C0.00960192 5.55324 0 5.82546 0 8ZM1.44349 8C1.44349 5.86389 1.45309 5.60769 1.4915 4.76541C1.52671 3.98399 1.65793 3.55805 1.76675 3.27942C1.91078 2.90793 2.08682 2.63891 2.36847 2.35709C2.65013 2.07526 2.91578 1.90552 3.29026 1.755C3.57191 1.64612 3.9976 1.51481 4.77535 1.47958C5.61712 1.44115 5.86997 1.43155 8.008 1.43155C10.146 1.43155 10.3989 1.44115 11.2406 1.47958C12.0216 1.51481 12.4473 1.64612 12.7257 1.755C13.097 1.89912 13.3659 2.07526 13.6475 2.35709C13.9292 2.63891 14.0988 2.90472 14.2493 3.27942C14.3581 3.56125 14.4893 3.98719 14.5245 4.76541C14.5629 5.60769 14.5725 5.86069 14.5725 8C14.5725 10.1393 14.5629 10.3923 14.5245 11.2346C14.4893 12.016 14.3581 12.442 14.2493 12.7206C14.1052 13.0921 13.9292 13.3611 13.6475 13.6429C13.3659 13.9247 13.1002 14.0945 12.7257 14.245C12.4441 14.3539 12.0184 14.4852 11.2406 14.5204C10.3989 14.5588 10.146 14.5685 8.008 14.5685C5.86997 14.5685 5.61712 14.5588 4.77535 14.5204C3.9944 14.4852 3.56871 14.3539 3.29026 14.245C2.91898 14.1009 2.65013 13.9247 2.36847 13.6429C2.08682 13.3611 1.91718 13.0953 1.76675 12.7206C1.65793 12.4388 1.52671 12.0128 1.4915 11.2346C1.44989 10.3923 1.44349 10.1361 1.44349 8Z"
-                fill="#F6F5F5"
-              />
-            </svg>
-          </a>
-        </li>
-
-        <li style="margin: 2.5rem 0rem 0rem -1.2rem">
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/company/grandes-encontros/"
-          >
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 15 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_2_99)">
-                <path
-                  d="M0 2.00106C0 1.51842 0.168924 1.12026 0.506757 0.806558C0.84459 0.492847 1.28379 0.335999 1.82432 0.335999C2.35522 0.335999 2.78474 0.490429 3.11293 0.799319C3.45077 1.11785 3.61969 1.5329 3.61969 2.04449C3.61969 2.50781 3.4556 2.8939 3.12741 3.20279C2.78958 3.52133 2.34556 3.68059 1.79537 3.68059H1.78089C1.25 3.68059 0.820468 3.52133 0.492278 3.20279C0.164088 2.88426 0 2.48368 0 2.00106ZM0.188224 14.67V4.99816H3.40251V14.67H0.188224ZM5.1834 14.67H8.39768V9.2694C8.39768 8.93155 8.4363 8.67093 8.51351 8.48754C8.64864 8.15935 8.85376 7.88184 9.12886 7.65501C9.40396 7.42817 9.74903 7.31476 10.1641 7.31476C11.2452 7.31476 11.7857 8.04352 11.7857 9.50106V14.67H15V9.12461C15 7.69603 14.6622 6.61254 13.9865 5.87413C13.3108 5.13571 12.418 4.7665 11.3079 4.7665C10.0627 4.7665 9.09266 5.30221 8.39768 6.37364V6.4026H8.3832L8.39768 6.37364V4.99816H5.1834C5.2027 5.30704 5.21236 6.26746 5.21236 7.87943C5.21236 9.4914 5.2027 11.7549 5.1834 14.67Z"
-                  fill="#F6F5F5"
+            <!-- Logo -->
+            <tr>
+              <td align="center">
+                <img
+                  class="logo"
+                  id="logo-ge"
+                  style="width: 12.68rem"
+                  src="https://grandesencontros.pt/wp-content/uploads/2018/09/logo_branco-01.png"
                 />
-              </g>
-              <defs>
-                <clipPath id="clip0_2_99">
-                  <rect width="15" height="15" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
-        </li>
+              </td>
+            </tr>
 
-        <li style="margin: 2.5rem 0rem 0rem -1.2rem">
-          <a
-            target="_blank"
-            href="https://www.youtube.com/channel/UCkOGRiyT2CkpZXwW4Agmizw"
+            <!-- Sub-logo -->
+            <tr>
+              <td align="center">
+                <p class="logo" id="sub-logo" justify="center">CATERING</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+
+        <!-- Espaço para informações de contato -->
+        <td>
+          <table
+            width="315"
+            style="border: solid red 1px; height: 240px"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
           >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15.6704 4.15288C15.4859 3.46755 14.9456 2.92719 14.2602 2.74268C13.0082 2.40001 7.99997 2.40001 7.99997 2.40001C7.99997 2.40001 2.99175 2.40001 1.7397 2.7295C1.06754 2.91401 0.514001 3.46755 0.329488 4.15288C0 5.40494 0 8.0013 0 8.0013C0 8.0013 0 10.6108 0.329488 11.8497C0.514001 12.5351 1.05436 13.0754 1.7397 13.2599C3.00493 13.6026 7.99997 13.6026 7.99997 13.6026C7.99997 13.6026 13.0082 13.6026 14.2602 13.2731C14.9456 13.0886 15.4859 12.5482 15.6704 11.8629C15.9999 10.6108 15.9999 8.01448 15.9999 8.01448C15.9999 8.01448 16.0131 5.40494 15.6704 4.15288Z"
-                fill="#F6F5F5"
-              />
-              <path
-                d="M6.40524 10.4L10.57 8.0013L6.40524 5.60263V10.4Z"
-                fill="#7DAFC4"
-              />
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <!-- fim icons -->
-    </div>
+            <thead style="background: #f6f5f5; height: 97px">
+              <tr>
+                <td>
+                  <h1 class="paragraph" style="">Nome Apelido</h1>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="paragraph" style="">Cargo</p>
+                </td>
+              </tr>
+            </thead>
+
+            <p
+              class="paragraph"
+              style="
+                height: 1.5px;
+                width: 32px;
+                border-bottom: 2px solid #7dafc4;
+                position: absolute;
+                margin-top: 96.5px;
+              "
+            ></p>
+
+            <tbody style="background: #ececeb">
+              <tr>
+                <td><p class="paragraph">Line4</p></td>
+              </tr>
+              <tr>
+                <td><p class="paragraph">Line5</p></td>
+              </tr>
+              <tr>
+                <td><p class="paragraph">Line6</p></td>
+              </tr>
+              <tr>
+                <td><p class="paragraph">Line7</p></td>
+              </tr>
+              <tr>
+                <td><p class="paragraph">Line8</p></td>
+              </tr>
+              <tr>
+                <td><p class="paragraph">Line9</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+
+        <!-- icons redes sociais -->
+        <td>
+          <table align="center" style="border: solid blue 1px">
+            <tr>
+              <td>Face</td>
+            </tr>
+            <tr>
+              <td>Insta</td>
+            </tr>
+            <tr>
+              <td>In</td>
+            </tr>
+            <tr>
+              <td>YT</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
