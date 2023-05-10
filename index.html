@@ -22,6 +22,10 @@
       .paragraph {
         margin-left: 31px;
       }
+
+      .font-color {
+        color: #8c8e90;
+      }
     </style>
 
     <table
@@ -96,18 +100,20 @@
             <thead style="background: #f6f5f5; height: 97px">
               <tr>
                 <td>
-                  <h1 class="paragraph" style="">Nome Apelido</h1>
+                  <h1 class="paragraph" style="color: #7dafc4">Nome Apelido</h1>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <p class="paragraph" style="">Cargo</p>
+                  <p class="paragraph font-color" style="font-size: 12.5px">
+                    Cargo
+                  </p>
                 </td>
               </tr>
             </thead>
 
             <p
-              class="paragraph"
+              class="paragraph font-color"
               style="
                 height: 1.5px;
                 width: 32px;
@@ -117,7 +123,7 @@
               "
             ></p>
 
-            <tbody style="background: #ececeb">
+            <tbody class="paragraph font-color" style="background: #ececeb">
               <tr>
                 <td><p class="paragraph">Line4</p></td>
               </tr>
@@ -142,7 +148,20 @@
 
         <!-- icons redes sociais -->
         <td>
-          <table align="center" style="border: solid blue 1px">
+          <table
+            id="icons"
+            align="center"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            style="
+              width: 50px;
+              background: #7dafc4;
+              border-collapse: collapse;
+              height: 240px;
+              border: solid blue 1px;
+            "
+          >
             <tr>
               <td>Face</td>
             </tr>
