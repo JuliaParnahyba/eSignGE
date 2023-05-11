@@ -16,7 +16,31 @@
       * {
         font-family: Montserrat, sans-serif;
         margin: 0;
-        padding: 0;
+
+        text-decoration: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .info {
+        margin-left: 1.7rem;
+
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: #8c8e90;
+        max-width: 19.6875rem;
+      }
+
+      .phones {
+        font-size: 0.5625rem;
+        font-weight: 400;
+      }
+
+      .adress {
+        font-size: 0.718rem;
+        font-weight: 400;
       }
 
       .paragraph {
@@ -33,7 +57,7 @@
       border="0"
       cellpadding="0"
       cellspacing="0"
-      style="height: 240px"
+      style="height: 240px; border-radius: 12px"
     >
       <tr>
         <!-- Espaço para imagem de colaborador e Logo -->
@@ -87,7 +111,13 @@
                   class="logo"
                   id="sub-logo"
                   justify="center"
-                  style="color: #ffffff; padding-bottom: 12px"
+                  style="
+                    color: #ffffff;
+                    padding-bottom: 12px;
+                    letter-spacing: 0.52em;
+                    font-size: 9.5px;
+                    width: 400;
+                  "
                 >
                   CATERING
                 </p>
@@ -100,10 +130,11 @@
         <td>
           <table
             width="315"
-            style="height: 240px"
             border="0"
+            margin="0"
             cellpadding="0"
             cellspacing="0"
+            style="height: 240px; border-radius: 12px"
           >
             <thead
               border="0"
@@ -113,18 +144,27 @@
             >
               <tr style="border-radius: 0">
                 <td>
-                  <h1 class="paragraph" style="color: #7dafc4">Nome Apelido</h1>
+                  <h1
+                    class="paragraph"
+                    style="color: #7dafc4; font-size: 30px; margin-top: 10px"
+                  >
+                    Rita Mendes
+                  </h1>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <p class="paragraph font-color" style="font-size: 12.5px">
-                    Cargo
+                  <p
+                    class="paragraph font-color"
+                    style="font-size: 12.5px; margin-bottom: 18px"
+                  >
+                    Coordenadora
                   </p>
                 </td>
               </tr>
             </thead>
 
+            <!--
             <p
               class="paragraph font-color"
               style="
@@ -135,28 +175,64 @@
                 margin-top: 94px;
               "
             ></p>
+            -->
 
             <tbody
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
               class="paragraph font-color"
-              style="background: #ececeb; height: 144px"
+              style="background: #ececeb; height: 148px"
             >
               <tr>
-                <td><p class="paragraph">Line4</p></td>
+                <td>
+                  <p class="paragraph info" style="margin-top: 4px">
+                    +351 935 024 920
+                  </p>
+                </td>
               </tr>
               <tr>
-                <td><p class="paragraph">Line5</p></td>
+                <td><p class="paragraph info">+351 227 724 884</p></td>
               </tr>
               <tr>
-                <td><p class="paragraph">Line6</p></td>
+                <td>
+                  <p class="phones" style="margin-left: 31px">
+                    Chamada para rede móvel/fixa nacional
+                  </p>
+                </td>
               </tr>
               <tr>
-                <td><p class="paragraph">Line7</p></td>
+                <td>
+                  <p
+                    class="paragraph"
+                    style="
+                      font-weight: 400;
+                      margin-top: 0.4rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <a
+                      target="_blank"
+                      style="color: #8c8e90; text-decoration: none"
+                      href="https://grandesencontros.pt/home-main/"
+                      >www.grandesencontros.pt</a
+                    >
+                  </p>
+                </td>
               </tr>
               <tr>
-                <td><p class="paragraph">Line8</p></td>
+                <td>
+                  <p class="paragraph info adress">
+                    Rua 28 de Janeiro, 350, Edifício L,
+                  </p>
+                </td>
               </tr>
               <tr>
-                <td><p class="paragraph">Line9</p></td>
+                <td>
+                  <p class="paragraph info adress" style="margin-bottom: 9px">
+                    Fracção 17, 4400-335 Vila Nova de Gaia
+                  </p>
+                </td>
               </tr>
             </tbody>
           </table>
